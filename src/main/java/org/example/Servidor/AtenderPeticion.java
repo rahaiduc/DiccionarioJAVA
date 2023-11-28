@@ -77,5 +77,28 @@ public class AtenderPeticion implements Runnable{
     }
 
     private void agregarPalabra(BufferedReader br,PrintStream ps) {
+        try{
+            ps.println("Ingrese la palabra: ");
+            String nuevaPalabra = br.readLine();
+
+            ps.println("Ingrese la definición: ");
+            String nuevaDefinicion = br.readLine();
+
+            //Agregamos la palabra y su definición al final del diccionario
+            try (FileWriter fw = new FileWriter(diccionario,true);
+                 BufferedWriter bw = new BufferedWriter(fw);
+                 PrintWriter out = new PrintWriter(bw)){
+                out.println(nuevaPalabra + ":" + nuevaDefinicion);
+                ps.println("Palabra agregada con exito");
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+                ps.println("Error al agregar la palabra al diccionario");
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
