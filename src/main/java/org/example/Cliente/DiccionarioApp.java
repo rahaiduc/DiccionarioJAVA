@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 public class DiccionarioApp extends JFrame {
     private JTextField palabraBuscarTextField;
@@ -16,13 +17,14 @@ public class DiccionarioApp extends JFrame {
     private JLabel definicionLabel;
 
     private JTextField palabraAnadirTextField;
+    private JTextField definicionAnadirTextField;
     private JButton anadirButton;
 
     // Constructor
     public DiccionarioApp(Socket socket) throws IOException {
 
-        PrintStream ps=new PrintStream(socket.getOutputStream());
-        BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintStream ps=new PrintStream(socket.getOutputStream(), true,StandardCharsets.UTF_8);
+        BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream(),StandardCharsets.UTF_8));
         // Configurar el JFrame
         setTitle("Diccionario");
         setSize(400, 200);
@@ -31,7 +33,7 @@ public class DiccionarioApp extends JFrame {
         // Crear un JTabbedPane
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        // Pestaña de búsqueda
+        // PESTAÑA DE BÚSQUEDA ---------------------------------------------------------------------
         JPanel buscarPanel = new JPanel();
         palabraBuscarTextField = new JTextField(20);
         buscarButton = new JButton("Buscar");
@@ -51,9 +53,10 @@ public class DiccionarioApp extends JFrame {
 
         tabbedPane.addTab("Buscar", buscarPanel);
 
-        // Pestaña de añadir
+        // PESTAÑA DE AÑADIR ---------------------------------------------------------------------
         JPanel anadirPanel = new JPanel();
         palabraAnadirTextField = new JTextField(20);
+        definicionAnadirTextField = new JTextField(20);
         anadirButton = new JButton("Añadir");
 
         anadirButton.addActionListener(new ActionListener() {
@@ -65,6 +68,8 @@ public class DiccionarioApp extends JFrame {
 
         anadirPanel.add(new JLabel("Palabra a añadir: "));
         anadirPanel.add(palabraAnadirTextField);
+        anadirPanel.add(new JLabel("Definición: "));
+        anadirPanel.add(definicionAnadirTextField);
         anadirPanel.add(anadirButton);
 
         tabbedPane.addTab("Añadir", anadirPanel);
@@ -87,16 +92,19 @@ public class DiccionarioApp extends JFrame {
 
     private void anadirPalabra(PrintStream ps,BufferedReader br) {
         String nuevaPalabra = palabraAnadirTextField.getText();
+        String nuevaDefinicion = definicionAnadirTextField.getText();
         try {
             ps.println("agregar");
             ps.println(nuevaPalabra);
+            ps.println(nuevaDefinicion);
             String resultado = br.readLine();
             JOptionPane.showMessageDialog(this, resultado);
-        }catch (IOException e){
+        }
+        catch (IOException e){
             e.printStackTrace();
         }
-
         palabraAnadirTextField.setText("");
+        definicionAnadirTextField.setText("");
     }
 
     private String obtenerDefinicion(String palabra,PrintStream ps,BufferedReader br) {

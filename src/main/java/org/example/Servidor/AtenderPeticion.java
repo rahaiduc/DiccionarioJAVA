@@ -7,6 +7,7 @@ package org.example.Servidor;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -78,14 +79,11 @@ public class AtenderPeticion implements Runnable{
 
     private void agregarPalabra(BufferedReader br,PrintStream ps) {
         try{
-            ps.println("Ingrese la palabra: ");
             String nuevaPalabra = br.readLine();
-
-            ps.println("Ingrese la definición: ");
             String nuevaDefinicion = br.readLine();
 
             //Agregamos la palabra y su definición al final del diccionario
-            try (FileWriter fw = new FileWriter(diccionario,true);
+            try (FileWriter fw = new FileWriter(diccionario, StandardCharsets.UTF_8, true);
                  BufferedWriter bw = new BufferedWriter(fw);
                  PrintWriter out = new PrintWriter(bw)){
                 out.println(nuevaPalabra + ":" + nuevaDefinicion);

@@ -206,4 +206,4 @@ ZIP: Formato de archivo comprimido que reduce el tamaño de los archivos para fa
 Zero-Day Exploit: Vulnerabilidad de seguridad que se aprovecha antes de que se disponga de una solución o parche.
 Zettabyte: Unidad de medida de almacenamiento equivalente a un trillón de gigabytes.
 Z-Wave: Protocolo de comunicación inalámbrica utilizado para la automatización del hogar y la conexión de dispositivos inteligentes.
-Zend Framework: Framework de desarrollo de aplicaciones web en PHP.Perro:agregar
+Zend Framework: Framework de desarrollo de aplicaciones web en PHP.
