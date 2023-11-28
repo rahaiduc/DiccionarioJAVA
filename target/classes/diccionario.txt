@@ -1,0 +1,209 @@
+Algoritmo: Conjunto ordenado y finito de operaciones que permite hallar la solución de un problema.
+API: Interfaz de Programación de Aplicaciones, conjunto de reglas y protocolos que permite a diferentes aplicaciones comunicarse entre sí.
+Ancho de banda: Capacidad máxima de transmisión de datos de un medio de comunicación.
+Archivo: Conjunto de datos almacenados bajo un nombre en un dispositivo de almacenamiento.
+ASCII: Código Estándar Americano para el Intercambio de Información, conjunto de caracteres y códigos numéricos utilizados para representar texto en computadoras y otros dispositivos.
+Adaptador: Dispositivo que permite la conexión entre diferentes componentes o dispositivos.
+Android: Sistema operativo para dispositivos móviles basado en el núcleo Linux.
+Array: Estructura de datos que contiene una colección ordenada de elementos.
+Azure: Plataforma de servicios en la nube de Microsoft.
+Assembly: Lenguaje de programación de bajo nivel que es específico de una arquitectura de computadora.
+Abstracción: Proceso de simplificar la complejidad de un sistema al ocultar los detalles innecesarios y destacar los relevantes.
+Apache: Servidor web de código abierto ampliamente utilizado en el desarrollo web.
+Autenticación: Proceso de verificar la identidad de un usuario, generalmente mediante nombre de usuario y contraseña.
+Análisis: Examen detallado y evaluación de un sistema o conjunto de datos.
+Angular: Marco de desarrollo web de código abierto desarrollado por Google para construir aplicaciones de una sola página.
+Atom: Editor de texto de código abierto desarrollado por GitHub.
+Ajax: Tecnología de desarrollo web que permite la actualización de contenido en una página sin necesidad de recargarla completamente.
+AWS (Amazon Web Services): Plataforma de servicios en la nube ofrecida por Amazon.
+A/B testing: Método de experimentación en el que se comparan dos versiones (A y B) para determinar cuál funciona mejor.
+App: Aplicación, programa de software diseñado para realizar una tarea específica en dispositivos móviles o computadoras.
+Byte: Unidad básica de almacenamiento de información, generalmente compuesta por 8 bits.
+BIOS: Sistema Básico de Entrada/Salida, firmware de bajo nivel que inicializa el hardware de la computadora.
+Bit: Dígito binario, la unidad más básica de información en la computación.
+Bus: Conjunto de líneas que transmiten datos entre componentes de una computadora.
+Backup: Copia de seguridad de datos almacenada en caso de pérdida o daño.
+Browser: Navegador web, aplicación para acceder a internet y ver páginas web.
+Buffer: Área de almacenamiento temporal utilizada para compensar diferencias de velocidad entre dispositivos.
+Bandwidth: Ancho de banda, capacidad máxima de transmisión de datos de una conexión de red.
+Blockchain: Registro distribuido y seguro de transacciones.
+Bootstrap: Proceso de iniciar o arrancar un sistema, especialmente un sistema operativo.
+Backend: Parte de una aplicación que gestiona la lógica y la interacción con la base de datos, generalmente en el servidor.
+Bit: La unidad más básica de información en sistemas de computación, puede representar 0 o 1.
+Bug: Error o defecto en un programa que provoca un comportamiento no deseado.
+Bootstrap: Marco de desarrollo web de código abierto que facilita el diseño de sitios web y aplicaciones.
+Buffer: Área de almacenamiento temporal utilizada para gestionar la diferencia de velocidad entre dos dispositivos.
+Byte: Unidad de medida de información que consiste en 8 bits.
+Boolean: Tipo de dato que puede tener uno de dos valores: verdadero o falso.
+Blockchain: Registro distribuido y seguro de transacciones utilizado en criptomonedas y otras aplicaciones.
+Big Data: Conjunto de datos extremadamente grande que requiere análisis avanzado y sistemas especiales para procesar.
+Browser: Navegador web, aplicación que permite acceder a páginas y recursos en internet.
+Binary: Sistema numérico que utiliza dos dígitos, 0 y 1, fundamental en la informática.
+Backup: Copia de seguridad de datos almacenada para prevenir pérdidas en caso de fallo del sistema.
+Bandwidth: Ancho de banda, medida de la capacidad de transmisión de datos de una conexión de red.
+Compilador: Programa que traduce código fuente escrito en un lenguaje de programación a un lenguaje de máquina.
+Código: Conjunto de instrucciones escritas en un lenguaje de programación que la computadora puede entender y ejecutar.
+CPU: Unidad Central de Procesamiento, el componente principal de un sistema informático que realiza las operaciones de procesamiento.
+Cloud: Modelo de entrega de servicios de computación a través de internet, que permite el acceso a recursos compartidos y escalables.
+CSS: Hojas de estilo en cascada, lenguaje de diseño utilizado para controlar la presentación y el formato de documentos HTML.
+Cache: Memoria de acceso rápido que almacena datos temporalmente para mejorar la velocidad de acceso.
+Cliente: Dispositivo o software que solicita servicios o recursos de un servidor en una red.
+Cookie: Pequeño archivo de datos que un servidor web envía al navegador del usuario para almacenar información sobre la sesión.
+Criptografía: Práctica de asegurar la comunicación y el almacenamiento de información utilizando técnicas de codificación.
+Command: Instrucción o código que se da a una computadora a través de una interfaz de línea de comandos.
+Debugger: Herramienta de software utilizada para identificar y corregir errores en programas.
+DNS: Sistema de Nombres de Dominio, traduce nombres de dominio a direcciones IP.
+Database: Base de datos, conjunto organizado de datos.
+DHCP: Protocolo de Configuración Dinámica de Host, asigna direcciones IP automáticamente en una red.
+Desktop: Escritorio, interfaz gráfica de usuario en un sistema operativo.
+Driver: Controlador, software que permite la comunicación entre el sistema operativo y un dispositivo de hardware.
+Data: Datos, información que se procesa o almacena.
+Distributed: Distribuido, sistema o red que se extiende por múltiples ubicaciones geográficas.
+Docker: Plataforma de contenedores que facilita el desarrollo y despliegue de aplicaciones.
+APIREST: Interfaz de Programación de Aplicaciones basada en transferencia de estado representacional.
+Ethernet: Estándar de tecnología de redes de área local (LAN) que define la forma en que las computadoras comparten información a través de un cable.
+Encryption: Encriptación, proceso de convertir información en un formato ilegible para protegerla.
+Email: Correo electrónico, medio de comunicación electrónico utilizado para enviar mensajes.
+Endpoint: Punto final, extremo de una conexión de red.
+Exception: Excepción, error inesperado que ocurre durante la ejecución de un programa.
+Edge: Borde, referente a tecnologías y servicios que se ejecutan más cerca del usuario final.
+Event: Evento, acción o suceso que ocurre y al que se puede responder.
+Exploit: Aprovechamiento, técnica para aprovechar vulnerabilidades de seguridad.
+Express: Marco de desarrollo web rápido y minimalista para Node.js.
+Editor: Programa utilizado para crear o modificar archivos de texto o código fuente.
+Firewall: Dispositivo o software que protege una red al controlar el flujo de datos que entra y sale de ella.
+Framework: Estructura de desarrollo, conjunto de herramientas y normas para facilitar el desarrollo de software.
+Frontend: Desarrollo de interfaz de usuario, parte de una aplicación que los usuarios ven y con la que interactúan.
+FTP: Protocolo de Transferencia de Archivos, utilizado para transferir archivos entre computadoras en una red.
+Function: Función, bloque de código que realiza una tarea específica.
+File: Archivo, conjunto de datos almacenados bajo un nombre en un dispositivo de almacenamiento.
+Floppy: Disquete, medio de almacenamiento de datos obsoleto.
+Flash: Tecnología de almacenamiento y reproducción de multimedia en línea.
+FPGA: Matriz de Puertas Programable en Campo, dispositivo electrónico que puede ser reconfigurado.
+Fingerprint: Huella digital, identificador único para autenticación biométrica.
+Git: Sistema de control de versiones distribuido utilizado para el seguimiento de cambios en el código fuente durante el desarrollo de software.
+GitHub: Plataforma de desarrollo colaborativo que utiliza Git para el control de versiones y permite a los desarrolladores trabajar juntos en proyectos.
+GUI: Entorno visual que permite a los usuarios interactuar con programas y sistemas operativos utilizando elementos gráficos como iconos y ventanas.
+GPU: Componente especializado en computadoras que se encarga de procesar gráficos y mejorar el rendimiento en tareas relacionadas con la visualización.
+Google Cloud: Plataforma de servicios en la nube ofrecida por Google, que incluye servicios de almacenamiento, procesamiento y machine learning.
+Game Development: Proceso de creación y producción de videojuegos, que abarca diseño, programación, arte y sonido.
+Grid Computing: Modelo de computación distribuida que utiliza recursos de varias máquinas para resolver problemas complejos.
+Gigabyte: Unidad de medida de almacenamiento equivalente a mil millones de bytes.
+HTML: Lenguaje de marcado utilizado para crear y estructurar contenido en la web.
+HTTP: Protocolo de comunicación utilizado para la transferencia de información en la World Wide Web.
+Hosting: Servicio que permite a los usuarios almacenar y acceder a archivos, páginas web u otros recursos en servidores remotos.
+Hacker: Persona con habilidades avanzadas en informática que puede utilizarlas para encontrar vulnerabilidades en sistemas o redes, ya sea con fines éticos o maliciosos.
+Hardware: Componentes físicos de una computadora o sistema informático, como la CPU, memoria RAM, disco duro, etc.
+HTTPS: Versión segura del protocolo HTTP que utiliza cifrado para proteger la transferencia de datos.
+Hash: Valor único generado por un algoritmo a partir de un conjunto de datos, utilizado para verificar la integridad de la información.
+Hibernate: Framework de código abierto que facilita el mapeo de objetos orientados a objetos a bases de datos relacionales en Java.
+Handle: Identificador único asociado a un recurso, como un archivo o un objeto, que permite su manipulación en un programa.
+Hotspot: Máquina virtual de Java desarrollada por Oracle, que optimiza la ejecución de programas Java en tiempo de ejecución.
+IoT: Concepto que se refiere a la conexión de dispositivos físicos a internet para recopilar y compartir datos.
+IP: Protocolo que facilita la comunicación entre dispositivos en una red y asigna direcciones únicas a cada dispositivo.
+IDE: Herramienta que proporciona funciones completas para el desarrollo de software, como editor de código, compilador y depurador.
+Interface: Punto de interconexión entre dos sistemas o componentes, como la interfaz de usuario en una aplicación.
+iOS: Sistema operativo móvil desarrollado por Apple utilizado en dispositivos como el iPhone y el iPad.
+ISP: Empresa que proporciona acceso a internet a los usuarios.
+Integer: Tipo de dato en programación que representa números enteros sin decimales.
+Input: Datos o información proporcionados a un sistema o programa.
+Intranet: Red privada de computadoras dentro de una organización que utiliza tecnologías de internet.
+Iteration: Proceso repetitivo en el que se ejecuta un conjunto de instrucciones varias veces.
+JavaScript: Lenguaje de programación utilizado para agregar interactividad a páginas web.
+JSON: Formato de intercambio de datos ligero utilizado para transmitir información entre servidores y clientes web.
+Java: Lenguaje de programación de propósito general que es concurrente, orientado a objetos y basado en clases.
+JVM: Entorno de ejecución que permite la ejecución de programas Java en diferentes plataformas.
+Joystick: Dispositivo de entrada que consiste en una palanca que se utiliza para controlar objetos en pantallas, especialmente en juegos.
+JSP: Tecnología de programación que permite la creación de páginas web dinámicas utilizando Java.
+JDBC: API de Java que permite a los programas Java interactuar con bases de datos.
+JQuery: Biblioteca de JavaScript que simplifica la manipulación y el manejo de eventos en páginas web.
+JIRA: Herramienta de gestión de proyectos y seguimiento de problemas utilizada en el desarrollo de software.
+Jupyter: Entorno de cuadernos interactivos utilizado para programación en varios lenguajes, especialmente en Python.
+JAR: Formato de archivo que permite empaquetar y comprimir archivos Java para facilitar su distribución.
+JPEG: Formato de archivo de imagen que utiliza compresión con pérdida, ampliamente utilizado para fotografías digitales.
+JUnit: Marco de prueba unitaria para el lenguaje de programación Java.
+Kernel: Parte central de un sistema operativo que gestiona los recursos del hardware y proporciona servicios a las aplicaciones.
+Keylogger: Software malicioso diseñado para registrar las pulsaciones de teclas en un dispositivo, a menudo utilizado para recopilar información confidencial como contraseñas.
+Kilobyte: Unidad de almacenamiento que representa aproximadamente 1024 bytes.
+Kotlin: Lenguaje de programación interoperable con Java y diseñado para ser conciso y expresivo.
+Keyword: Palabra reservada en un lenguaje de programación que tiene un significado específico y no puede ser utilizada para otros propósitos.
+Linux: Sistema operativo de código abierto basado en el kernel Linux, utilizado en servidores, computadoras de escritorio y dispositivos embebidos.
+LAN: Red que conecta dispositivos dentro de un área geográfica limitada, como una oficina o un hogar.
+Link: Enlace que conecta una página web con otra, o que dirige a un recurso específico en internet.
+Loop: Estructura de control en programación que repite un conjunto de instrucciones hasta que se cumple una condición.
+Login: Proceso de autenticación que permite a un usuario acceder a un sistema o aplicación.
+Latencia: Retardo experimentado al transmitir datos, especialmente en redes, medido en tiempo entre la solicitud y la respuesta.
+JavaScript Library: Conjunto de funciones predefinidas escritas en JavaScript para facilitar el desarrollo de aplicaciones web.
+APIREST: Estilo arquitectónico para el diseño de servicios web.
+Load Balancing: Distribución equitativa de la carga de trabajo entre varios servidores o recursos para mejorar la eficiencia y la disponibilidad.
+Logout: Proceso de finalizar la sesión de un usuario en un sistema o aplicación.
+Middleware: Software que actúa como intermediario entre diferentes aplicaciones o sistemas, facilitando la comunicación y la integración.
+Machine Learning: Rama de la inteligencia artificial que permite a las computadoras aprender y mejorar su rendimiento sin intervención humana directa.
+Mobile App: Programa diseñado para ejecutarse en dispositivos móviles como teléfonos inteligentes y tabletas.
+Metadata: Información adicional que describe y proporciona contexto sobre otros datos.
+Multihilo: Técnica que permite a un programa realizar múltiples tareas simultáneamente, mejorando la eficiencia.
+Microservicios: Arquitectura de desarrollo de software que estructura una aplicación como un conjunto de servicios independientes.
+Programacion modular: Enfoque de desarrollo que organiza el código en módulos independientes y reutilizables.
+MySQL: Sistema de gestión de bases de datos relacional de código abierto.
+MapReduce: Modelo de programación y procesamiento de datos para grandes conjuntos de información distribuida.
+Mockup: Representación visual de la interfaz de usuario de una aplicación o sitio web.
+Node.js: Entorno de ejecución de JavaScript del lado del servidor que permite ejecutar código JavaScript en el servidor web.
+Network: Infraestructura que conecta dispositivos para facilitar la comunicación y el intercambio de datos.
+Red: Infraestructura que conecta dispositivos para facilitar la comunicación y el intercambio de datos
+Namespace: Contenedor que agrupa identificadores para evitar conflictos de nombres en programación.
+Null: Valor que indica la ausencia de datos o la falta de un valor válido en programación.
+NPM: Gestor de paquetes para JavaScript, utilizado para instalar y administrar bibliotecas y herramientas.
+Codigo Abierto: Software cuyo código fuente es accesible y puede ser modificado y redistribuido por la comunidad.
+Sistema Operativo: Software que gestiona los recursos de hardware y proporciona servicios a las aplicaciones en una computadora.
+Programación Orientada a Objetos: Paradigma de programación que utiliza objetos para organizar y estructurar el código.
+OAuth: Protocolo de autorización que permite a una aplicación acceder a recursos en nombre de un usuario sin revelar sus credenciales.
+ORM: Técnica de programación que facilita la interacción entre sistemas de gestión de bases de datos relacionales y objetos en código.
+Python: Lenguaje de programación de alto nivel y de propósito general.
+Lenguaje de programacion: Conjunto de reglas y comandos utilizados para escribir software.
+Protocol: Conjunto de reglas que define cómo los datos son transmitidos en una red.
+PaaS: Modelo de servicio en la nube que proporciona una plataforma para el desarrollo, prueba y despliegue de aplicaciones.
+Public Key Encryption: Método criptográfico que utiliza un par de claves (pública y privada) para cifrar y descifrar datos de manera segura.
+APIREST: Interfaz de Programación de Aplicaciones basada en transferencia de estado representacional.
+Proxy: Servidor intermedio que actúa como intermediario entre un usuario y otro servidor para proporcionar servicios de seguridad, rendimiento, etc.
+Push Notification: Mensaje enviado desde un servidor a una aplicación en un dispositivo móvil, incluso si la aplicación no está en uso.
+Paquete: Unidad de datos transmitida a través de una red, que incluye información y metadatos para su entrega.
+Analisis predictivo: Proceso de utilizar datos, algoritmos y modelos estadísticos para prever eventos futuros.
+Query: Petición de información a una base de datos utilizando un lenguaje de consulta, como SQL.
+Queue: Estructura de datos que sigue el principio de "primero en entrar, primero en salir" (FIFO) para organizar elementos.
+QuickSort: Algoritmo de ordenación eficiente que utiliza la estrategia de "divide y conquista" para ordenar elementos.
+Diseño responsivo: Enfoque de diseño web que garantiza que las páginas se vean bien en una variedad de dispositivos y tamaños de pantalla.
+Repositorio: Almacenamiento centralizado donde se guarda y gestiona el código fuente y otros recursos en desarrollo de software.
+REST: Estilo arquitectónico para diseñar servicios web que utiliza las operaciones HTTP estándar.
+Scrum: Metodología ágil de gestión de proyectos que se centra en iteraciones cortas de desarrollo, llamadas sprints.
+SQL: Lenguaje de programación utilizado para gestionar y manipular bases de datos relacionales.
+Servidor: Computadora o sistema que proporciona servicios a otras computadoras, conocidas como clientes, en una red.
+Software: Conjunto de instrucciones que dirige la operación de un sistema de cómputo, incluyendo programas y datos.
+TCP/IP: Conjunto de protocolos que se utiliza para la transmisión de datos en redes, incluida internet.
+Turing Complete: Término que describe un sistema capaz de realizar cualquier tarea de cálculo que se pueda expresar en términos algorítmicos.
+Testing: Proceso de evaluar un sistema o componente para determinar si cumple con los requisitos especificados.
+Virtualizacion: Tecnología que permite crear entornos virtuales aislados, como máquinas virtuales, en un único sistema físico.
+VPN: Red segura que utiliza una red pública, como internet, para conectar nodos de manera privada y segura.
+Control de Versiones: Sistema que registra cambios en un conjunto de archivos a lo largo del tiempo, permitiendo revertir a versiones anteriores si es necesario.
+Navegador web: Aplicación que permite a los usuarios acceder y navegar por páginas web en internet.
+Wifi: Tecnología que permite la conexión a internet y redes locales de forma inalámbrica.
+WLAN: Red de área local que utiliza tecnologías inalámbricas para conectar dispositivos en un área geográfica limitada.
+Desarrollo web: Proceso de crear y mantener sitios web, incluyendo diseño, programación y gestión de contenido.
+Web Hosting: Servicio que permite a los usuarios almacenar y acceder a archivos, páginas web y otros recursos en servidores remotos.
+Seguridad web: Prácticas y medidas para proteger sitios web y aplicaciones contra amenazas y vulnerabilidades.
+W3C: Organización que desarrolla estándares para la World Wide Web con el objetivo de garantizar su crecimiento a largo plazo.
+Workflow: Secuencia de tareas interrelacionadas que forman un proceso completo en el desarrollo de software o en otras áreas.
+Widget: Pequeña aplicación o herramienta gráfica que proporciona funcionalidad específica en la interfaz de usuario.
+XML: Lenguaje de marcado que se utiliza para almacenar y transportar datos de manera legible por humanos y máquinas.
+XSS: Vulnerabilidad de seguridad web que permite a los atacantes inyectar scripts maliciosos en páginas web visualizadas por otros usuarios.
+XAMPP: Paquete de software que facilita la instalación de Apache, MySQL, PHP y Perl para el desarrollo web local.
+XPath: Lenguaje que se utiliza para seleccionar nodos de un documento XML.
+Xamarin: Plataforma para el desarrollo de aplicaciones móviles utilizando el lenguaje de programación C#.
+YAML: Lenguaje de serialización de datos que es fácilmente legible por humanos y utilizado comúnmente en configuraciones.
+YouTube: Plataforma de alojamiento de videos en línea donde los usuarios pueden subir, ver y compartir contenido.
+Yottabyte: Unidad de medida de almacenamiento equivalente a un trillón de gigabytes.
+YARN: Sistema de gestión de recursos utilizado en el ecosistema Hadoop para administrar recursos en clústeres.
+ZIP: Formato de archivo comprimido que reduce el tamaño de los archivos para facilitar la transferencia y el almacenamiento.
+Zero-Day Exploit: Vulnerabilidad de seguridad que se aprovecha antes de que se disponga de una solución o parche.
+Zettabyte: Unidad de medida de almacenamiento equivalente a un trillón de gigabytes.
+Z-Wave: Protocolo de comunicación inalámbrica utilizado para la automatización del hogar y la conexión de dispositivos inteligentes.
+Zend Framework: Framework de desarrollo de aplicaciones web en PHP.

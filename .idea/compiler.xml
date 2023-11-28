@@ -9,8 +9,5 @@
         <module name="DiccionarioJAVA" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DiccionarioJAVA" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
