@@ -1,5 +1,6 @@
 package org.example.Cliente;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -14,8 +15,8 @@ import java.nio.charset.StandardCharsets;
 public class DiccionarioApp extends JFrame {
     private JTextField palabraBuscarTextField;
     private JButton buscarButton;
-    private JLabel definicionLabel;
-
+    //private JLabel definicionLabel;
+    private JTextPane definicionLabel;
     private JTextField palabraAnadirTextField;
     private JTextField definicionAnadirTextField;
     private JButton anadirButton;
@@ -27,29 +28,54 @@ public class DiccionarioApp extends JFrame {
         BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream(),StandardCharsets.UTF_8));
         // Configurar el JFrame
         setTitle("Diccionario");
-        setSize(400, 200);
+        setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout());
 
         // Crear un JTabbedPane
         JTabbedPane tabbedPane = new JTabbedPane();
 
         // PESTAÑA DE BÚSQUEDA ---------------------------------------------------------------------
-        JPanel buscarPanel = new JPanel();
-        palabraBuscarTextField = new JTextField(20);
-        buscarButton = new JButton("Buscar");
-        definicionLabel = new JLabel("Definición: ");
+        JPanel buscarPanel = new JPanel(new GridLayout(2,2));
+        JPanel buscarPanelsub1 = new JPanel(new GridBagLayout());
 
+        // Crear un JPanel con GridBagLayout
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        // Configurar el JLabel y el JTextField en la primera fila
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(5, 5, 5, 5); // Márgenes
+        buscarPanelsub1.add(new JLabel("Palabra a buscar:"), gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
+        palabraBuscarTextField = new JTextField(20);
+        buscarPanelsub1.add(palabraBuscarTextField, gbc);
+
+        // Configurar el JButton en la segunda fila
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2; // Ocupa dos columnas
+        gbc.anchor = GridBagConstraints.CENTER; // Centra el botón
+        buscarButton = new JButton("Buscar");
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 buscarPalabra(ps,br);
             }
         });
+        buscarPanelsub1.add(buscarButton, gbc);
 
-        buscarPanel.add(new JLabel("Palabra a buscar: "));
-        buscarPanel.add(palabraBuscarTextField);
-        buscarPanel.add(buscarButton);
-        buscarPanel.add(definicionLabel);
+        JPanel buscarPanelsub2 = new JPanel(new GridLayout());
+        definicionLabel=new JTextPane();
+        definicionLabel.setEditable(false);
+        buscarPanelsub2.add(definicionLabel);
+
+        //Añadir los dos subpaneles al panel padre
+        buscarPanel.add(buscarPanelsub1);
+        buscarPanel.add(buscarPanelsub2);
 
         tabbedPane.addTab("Buscar", buscarPanel);
 
@@ -86,25 +112,32 @@ public class DiccionarioApp extends JFrame {
 
     private void buscarPalabra(PrintStream ps,BufferedReader br) {
         String palabra = palabraBuscarTextField.getText();
-        String definicion = obtenerDefinicion(palabra,ps,br);
-        definicionLabel.setText("Definicion: " + definicion);
+        if(palabra.isEmpty() || palabra.isBlank()){
+            JOptionPane.showMessageDialog(this, "No has escrito una palabra");
+        }else{
+            String definicion = obtenerDefinicion(palabra,ps,br);
+            definicionLabel.setText("Definicion: " + definicion);
+        }
     }
 
     private void anadirPalabra(PrintStream ps,BufferedReader br) {
         String nuevaPalabra = palabraAnadirTextField.getText();
         String nuevaDefinicion = definicionAnadirTextField.getText();
-        try {
-            ps.println("agregar");
-            ps.println(nuevaPalabra);
-            ps.println(nuevaDefinicion);
-            String resultado = br.readLine();
-            JOptionPane.showMessageDialog(this, resultado);
+        if (nuevaPalabra.isEmpty() || nuevaPalabra.isBlank() || nuevaDefinicion.isEmpty() || nuevaDefinicion.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Algún campo esta vacío. Rellenalo");
+        } else{
+            try {
+                ps.println("agregar");
+                ps.println(nuevaPalabra);
+                ps.println(nuevaDefinicion);
+                String resultado = br.readLine();
+                JOptionPane.showMessageDialog(this, resultado);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            palabraAnadirTextField.setText("");
+            definicionAnadirTextField.setText("");
         }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-        palabraAnadirTextField.setText("");
-        definicionAnadirTextField.setText("");
     }
 
     private String obtenerDefinicion(String palabra,PrintStream ps,BufferedReader br) {
