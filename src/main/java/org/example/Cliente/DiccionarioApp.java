@@ -80,23 +80,43 @@ public class DiccionarioApp extends JFrame {
         tabbedPane.addTab("Buscar", buscarPanel);
 
         // PESTAÑA DE AÑADIR ---------------------------------------------------------------------
-        JPanel anadirPanel = new JPanel();
-        palabraAnadirTextField = new JTextField(20);
-        definicionAnadirTextField = new JTextField(20);
-        anadirButton = new JButton("Añadir");
+        JPanel anadirPanel = new JPanel(new GridBagLayout());
+        gbc = new GridBagConstraints();
+        // Configurar el JLabel y el JTextField en la primera fila
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(5, 5, 5, 5); // Márgenes
+        anadirPanel.add(new JLabel("Palabra a añadir:"), gbc);
 
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
+        palabraAnadirTextField = new JTextField(20);
+        anadirPanel.add(palabraAnadirTextField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.insets = new Insets(5, 5, 5, 5); // Márgenes
+        anadirPanel.add(new JLabel("Definicion:"), gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
+        definicionAnadirTextField = new JTextField(20);
+        anadirPanel.add(definicionAnadirTextField, gbc);
+        // Configurar el JButton en la segunda fila
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2; // Ocupa dos columnas
+        gbc.anchor = GridBagConstraints.CENTER; // Centra el botón
+        anadirButton = new JButton("Añadir");
+        anadirPanel.add(anadirButton,gbc);
         anadirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 anadirPalabra(ps,br);
             }
         });
-
-        anadirPanel.add(new JLabel("Palabra a añadir: "));
-        anadirPanel.add(palabraAnadirTextField);
-        anadirPanel.add(new JLabel("Definición: "));
-        anadirPanel.add(definicionAnadirTextField);
-        anadirPanel.add(anadirButton);
 
         tabbedPane.addTab("Añadir", anadirPanel);
 
