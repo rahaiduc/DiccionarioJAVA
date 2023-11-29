@@ -86,7 +86,7 @@ public class AtenderPeticion implements Runnable{
             try (FileWriter fw = new FileWriter(diccionario, StandardCharsets.UTF_8, true);
                  BufferedWriter bw = new BufferedWriter(fw);
                  PrintWriter out = new PrintWriter(bw)){
-                out.println(nuevaPalabra + ":" + nuevaDefinicion);
+                out.println(nuevaPalabra + ": " + nuevaDefinicion);
                 ps.println("Palabra agregada con exito");
             }
             catch (IOException e) {
