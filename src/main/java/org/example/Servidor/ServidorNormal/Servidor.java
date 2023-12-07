@@ -1,4 +1,4 @@
-package org.example.Servidor;
+package org.example.Servidor.ServidorNormal;
 
 // TITULO : Diccionario con hilos virtuales
 // FECHA : 23/11/2023

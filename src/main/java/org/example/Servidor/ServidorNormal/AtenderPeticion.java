@@ -1,4 +1,4 @@
-package org.example.Servidor;
+package org.example.Servidor.ServidorNormal;
 
 // TITULO : Diccionario con hilos virtuales
 // FECHA : 23/11/2023
@@ -10,10 +10,7 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class AtenderPeticion implements Runnable{
 
@@ -34,8 +31,10 @@ public class AtenderPeticion implements Runnable{
             while (!leido.contains("desconectar")) {
                 if (leido.equals("agregar")) {
                     agregarPalabra(br,ps);
-                } else {
+                } else if(leido.equals("buscar")){
                     buscarPalabra(br, ps);
+                }else if(leido.equals("jugar")){
+                    empezarPartida(ps,br);
                 }
                 leido= br.readLine();
             }
@@ -98,5 +97,22 @@ public class AtenderPeticion implements Runnable{
             e.printStackTrace();
         }
 
+    }
+    private void empezarPartida(PrintStream ps,BufferedReader br) {
+        try(Socket socket=new Socket("localhost",6000);
+            BufferedReader recibir=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintStream enviar=new PrintStream(socket.getOutputStream())){
+            ps.println("Esperando la conexion de otros 2 jugadores para dar comienzo a la partida...");
+            Thread TEnviar=new Thread(new EnviarMensajeJuego(enviar,br));
+            Thread TRecibir=new Thread(new RecibirMensajeJuego(recibir,ps));
+            TEnviar.start();
+            TRecibir.start();
+            TEnviar.join();
+            TRecibir.join();
+        }catch (IOException e){
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

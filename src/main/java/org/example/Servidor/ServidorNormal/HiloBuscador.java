@@ -1,4 +1,4 @@
-package org.example.Servidor;
+package org.example.Servidor.ServidorNormal;
 
 import java.io.File;
 import java.io.IOException;

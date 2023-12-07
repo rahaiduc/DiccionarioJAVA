@@ -20,7 +20,7 @@ public class DiccionarioApp extends JFrame {
     private JTextField palabraAnadirTextField;
     private JTextField definicionAnadirTextField;
     private JButton anadirButton;
-
+    JTextArea jTextoServer;
     // Constructor
     public DiccionarioApp(Socket socket) throws IOException {
 
@@ -119,7 +119,35 @@ public class DiccionarioApp extends JFrame {
         });
 
         tabbedPane.addTab("Añadir", anadirPanel);
+        // PESTAÑA DE AÑADIR ---------------------------------------------------------------------
 
+        JPanel juegoPanel = new JPanel(new BorderLayout());
+        JButton botonConectar=new JButton("Conectar");
+        botonConectar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                comenzarJuego(ps,br);
+            }
+        });
+        juegoPanel.add(botonConectar, BorderLayout.NORTH);
+        jTextoServer=new JTextArea();
+        jTextoServer.setEditable(false);
+        juegoPanel.add(jTextoServer, BorderLayout.CENTER);
+        JPanel messagePanel = new JPanel(new BorderLayout());
+        JTextField messageField = new JTextField();
+        JButton sendMessageButton = new JButton("Enviar respuesta");
+        sendMessageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ps.println(messageField.getText());
+
+            }
+        });
+        messagePanel.add(messageField, BorderLayout.CENTER);
+        messagePanel.add(sendMessageButton, BorderLayout.EAST);
+        juegoPanel.add(messagePanel, BorderLayout.SOUTH);
+
+        tabbedPane.addTab("Juego",juegoPanel);
         // Agregar el JTabbedPane al JFrame
         add(tabbedPane);
         addWindowListener(new WindowAdapter() {
@@ -130,6 +158,12 @@ public class DiccionarioApp extends JFrame {
         });
     }
 
+
+    private void comenzarJuego(PrintStream ps,BufferedReader br) {
+        ps.println("jugar");
+        Thread thread=new Thread(new HiloJuego(br,jTextoServer));
+        thread.start();
+    }
     private void buscarPalabra(PrintStream ps,BufferedReader br) {
         String palabra = palabraBuscarTextField.getText();
         if(palabra.isEmpty() || palabra.isBlank()){
