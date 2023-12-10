@@ -28,7 +28,8 @@ public class HiloBuscador implements Callable<Boolean>{
         try(RandomAccessFile raf=new RandomAccessFile(diccionario,"r")){
             raf.seek(inicio);
             while(raf.getFilePointer()<fin){
-                String [] partes=raf.readLine().split(": ");
+                String s=new String(raf.readLine().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+                String [] partes=s.split(": ");
                 if(partes[0].toLowerCase().equals(palabra)){
                     printStream.println(partes[1]);
                     result=true;
