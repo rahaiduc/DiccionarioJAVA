@@ -37,6 +37,8 @@ public class AtenderPeticion implements Runnable{
                     buscarPalabra(br, ps);
                 }else if(leido.equals("jugar")){
                     empezarPartida(ps,br);
+                }else if(leido.equals("eliminar")){
+                    eliminarPalabra(br,ps);
                 }
                 leido= br.readLine();
             }
@@ -127,7 +129,7 @@ public class AtenderPeticion implements Runnable{
                 }
                 catch(IOException e){
                     e.printStackTrace();
-                    ps.println("Erros al eliminar la palabra del diccionario");
+                    ps.println("Error al eliminar la palabra del diccionario");
                 }
             }
             else{

@@ -137,11 +137,6 @@ public class DiccionarioApp extends JFrame {
         palabraEliminarTextField = new JTextField(20);
         eliminarPanel.add(palabraEliminarTextField, gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
-        definicionAnadirTextField = new JTextField(20);
-        anadirPanel.add(definicionAnadirTextField, gbc);
         // Configurar el JButton en la segunda fila
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -152,7 +147,7 @@ public class DiccionarioApp extends JFrame {
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anadirPalabra(ps,br);
+                eliminarPalabra(ps,br);
             }
         });
         tabbedPane.addTab("Eliminar",eliminarPanel);
@@ -230,6 +225,23 @@ public class DiccionarioApp extends JFrame {
             }
             palabraAnadirTextField.setText("");
             definicionAnadirTextField.setText("");
+        }
+    }
+
+    private void eliminarPalabra(PrintStream ps,BufferedReader br) {
+        String nuevaPalabra = palabraEliminarTextField.getText();
+        if (nuevaPalabra.isEmpty() || nuevaPalabra.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Algún campo esta vacío. Rellenalo");
+        } else{
+            try {
+                ps.println("eliminar");
+                ps.println(nuevaPalabra);
+                String resultado = br.readLine();
+                JOptionPane.showMessageDialog(this, resultado);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            palabraEliminarTextField.setText("");
         }
     }
 
