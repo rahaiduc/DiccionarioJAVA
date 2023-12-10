@@ -8,8 +8,10 @@ package org.example.Servidor.ServidorNormal;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.concurrent.*;
 
 public class AtenderPeticion implements Runnable{
@@ -98,6 +100,45 @@ public class AtenderPeticion implements Runnable{
         }
 
     }
+    private void eliminarPalabra(BufferedReader br,PrintStream ps){
+
+        try{
+            String palabraEliminar = br.readLine();
+            List<String> lineasDiccionario = Files.readAllLines(diccionario.toPath(), StandardCharsets.UTF_8);
+            boolean encontrada = false;
+
+            //Recorremos las palabras del diccionario para ver si encontramos la que queremos
+            for(ListIterator<String> iter = lineasDiccionario.listIterator(); iter.hasNext(); ){
+                String linea = iter.next();
+                if(linea.startsWith(palabraEliminar + ":")){
+                    iter.remove();
+                    encontrada = true;
+                    break;
+                }
+            }
+
+            //Actualizamos nuestro diccionario con las modificaciones realizadas
+            if(encontrada){
+                try(PrintWriter writer = new PrintWriter(diccionario, StandardCharsets.UTF_8)){
+                    for(String linea: lineasDiccionario){
+                        writer.println(linea);
+                    }
+                    ps.println("Palabra eliminada con éxito");
+                }
+                catch(IOException e){
+                    e.printStackTrace();
+                    ps.println("Erros al eliminar la palabra del diccionario");
+                }
+            }
+            else{
+                ps.println("La palabra no se encontró en el diccionario");
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     private void empezarPartida(PrintStream ps,BufferedReader br) {
         try(Socket socket=new Socket("localhost",6000);
             BufferedReader recibir=new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -115,4 +156,6 @@ public class AtenderPeticion implements Runnable{
             throw new RuntimeException(e);
         }
     }
+
+
 }

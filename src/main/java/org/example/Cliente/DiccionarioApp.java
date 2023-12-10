@@ -18,8 +18,10 @@ public class DiccionarioApp extends JFrame {
     //private JLabel definicionLabel;
     private JTextPane definicionLabel;
     private JTextField palabraAnadirTextField;
+    private JTextField palabraEliminarTextField;
     private JTextField definicionAnadirTextField;
     private JButton anadirButton;
+    private JButton eliminarButton;
     JTextArea jTextoServer;
     // Constructor
     public DiccionarioApp(Socket socket) throws IOException {
@@ -119,6 +121,42 @@ public class DiccionarioApp extends JFrame {
         });
 
         tabbedPane.addTab("Añadir", anadirPanel);
+
+        // PESTAÑA DE ELIMINAR ---------------------------------------------------------------------
+        JPanel eliminarPanel = new JPanel(new GridBagLayout());
+        gbc = new GridBagConstraints();
+        // Configurar el JLabel y el JTextField en la primera fila
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(5, 5, 5, 5); // Márgenes
+        eliminarPanel.add(new JLabel("Palabra a eliminar:"), gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
+        palabraEliminarTextField = new JTextField(20);
+        eliminarPanel.add(palabraEliminarTextField, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL; // El JTextField se expandirá horizontalmente
+        definicionAnadirTextField = new JTextField(20);
+        anadirPanel.add(definicionAnadirTextField, gbc);
+        // Configurar el JButton en la segunda fila
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2; // Ocupa dos columnas
+        gbc.anchor = GridBagConstraints.CENTER; // Centra el botón
+        eliminarButton = new JButton("Eliminar");
+        eliminarPanel.add(eliminarButton,gbc);
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                anadirPalabra(ps,br);
+            }
+        });
+        tabbedPane.addTab("Eliminar",eliminarPanel);
+
         // PESTAÑA DE JUEGO ---------------------------------------------------------------------
 
         JPanel juegoPanel = new JPanel(new BorderLayout());
@@ -148,6 +186,7 @@ public class DiccionarioApp extends JFrame {
         juegoPanel.add(messagePanel, BorderLayout.SOUTH);
 
         tabbedPane.addTab("Juego",juegoPanel);
+
         // Agregar el JTabbedPane al JFrame
         add(tabbedPane);
         addWindowListener(new WindowAdapter() {
