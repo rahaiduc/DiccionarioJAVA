@@ -119,7 +119,7 @@ public class DiccionarioApp extends JFrame {
         });
 
         tabbedPane.addTab("Añadir", anadirPanel);
-        // PESTAÑA DE AÑADIR ---------------------------------------------------------------------
+        // PESTAÑA DE JUEGO ---------------------------------------------------------------------
 
         JPanel juegoPanel = new JPanel(new BorderLayout());
         JButton botonConectar=new JButton("Conectar");
@@ -139,7 +139,7 @@ public class DiccionarioApp extends JFrame {
         sendMessageButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ps.println(messageField.getText());
+                ps.println(messageField.getText().toLowerCase());
 
             }
         });

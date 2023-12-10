@@ -24,7 +24,7 @@ public class HiloJugador implements Runnable{
             countDownLatch.await();
             participante.getPrintStream().println("¿Cual es la palabra cuya definicion es esta?");
             participante.getPrintStream().println(definicion);
-            while (!participante.getBufferedReader().readLine().equals(respuesta)){
+            while (!participante.getBufferedReader().readLine().equals(respuesta.toLowerCase())){
                 participante.getPrintStream().println("Respuesta Incorrecta. Vuelve a intentarlo.");
             }
             participante.getPrintStream().println("¡¡¡Exitoo!!! Espera a los demas para la siguiente ronda.");
