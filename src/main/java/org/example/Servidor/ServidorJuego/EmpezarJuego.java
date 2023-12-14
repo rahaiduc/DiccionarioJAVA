@@ -30,6 +30,7 @@ public class EmpezarJuego implements Runnable {
                 String[] pregunta = obtenerPregunta();
                 String definicion = pregunta[1];
                 String respuesta = pregunta[0];
+                System.out.println("Respuesta: "+ respuesta);
                 Thread tJugador1=new Thread(new HiloJugador(participante1,definicion,respuesta,countDownLatch));
                 Thread tJugador2=new Thread(new HiloJugador(participante2,definicion,respuesta,countDownLatch));
                 Thread tJugador3=new Thread(new HiloJugador(participante3,definicion,respuesta,countDownLatch));

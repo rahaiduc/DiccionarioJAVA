@@ -24,7 +24,7 @@ public class HiloJuego implements Runnable{
                 mensaje=br.readLine();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Te has desconectado");
         }
     }
 }
